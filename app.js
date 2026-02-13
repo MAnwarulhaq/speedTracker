@@ -89,3 +89,13 @@ err=>alert(err.message),
 stopBtn.onclick=()=>{
 navigator.geolocation.clearWatch(watchId)
 }
+
+// console.log(Notification.permission)
+// permission request
+Notification.requestPermission().then(permission=>{
+  if(permission==="granted"){
+    new Notification("Hello!",{
+      body:"This is a test notification"
+    })
+  }
+})
