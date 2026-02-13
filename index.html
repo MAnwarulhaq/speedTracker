@@ -4,52 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Live Tracker Pro</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+</style>
 </head>
 <body>
 
 <div class="app">
 
+<div class="card">
+<input type="text" id="startLoc" placeholder="Start location">
+<input type="text" id="endLoc" placeholder="Destination">
+<button id="routeBtn">Show Route</button>
+</div>
+
 <header>
 <h1>Live Tracker Pro</h1>
-<div class="controls">
 <button class="start">Start</button>
 <button class="stop">Stop</button>
-</div>
 </header>
 
 <div class="grid">
 
 <div id="map"></div>
 
-<div class="side">
+<div>
 
 <div class="card">
-<div class="label">Latitude</div>
+<div>Latitude</div>
 <div class="value" id="lat">--</div>
 
-<div class="label" style="margin-top:15px">Longitude</div>
+<div style="margin-top:10px">Longitude</div>
 <div class="value" id="lng">--</div>
 </div>
 
 <div class="card" style="text-align:center">
-<div class="label">Speed km/h</div>
+<div>Speed km/h</div>
 <div class="speedGauge" id="speedGauge">0</div>
 </div>
 
 <div class="card">
-<div class="label">Location History</div>
-<div class="history" id="history"></div>
+<div>Location History</div>
+<div id="history"></div>
 </div>
 
 </div>
 </div>
 </div>
-
-
 
 <script src="app.js"></script>
-
 </body>
 </html>
